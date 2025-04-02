@@ -1,0 +1,34 @@
+{
+  "name": "nexus",
+  "displayName": "Nexus Lang Support",
+  "description": "Nexus Programming Language Support for Visual Studio Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "nxs",
+      "aliases": ["nexus", "nxs"],
+      "extensions": [".nxs"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "dark": "./nxs_logo.png",
+        "light": "./nxs_logo.png"
+      }
+    }],
+    "grammars": [{
+      "language": "nxs",
+      "scopeName": "source.nxs",
+      "path": "./syntaxes/nxs.tmLanguage.json"
+    }],
+    "themes": [{
+      "label": "Nexus",
+      "uiTheme": "vs-dark",
+      "path": "./nexus-color-theme.json"
+    }]
+  }
+}

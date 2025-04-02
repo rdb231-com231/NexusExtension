@@ -1,0 +1,82 @@
+{
+    "name": "Nexus Theme",
+    "tokenColors": [
+        {
+            "scope": "keyword.control.exception.nxs",
+            "settings": {
+                "foreground": "#e3b341",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "scope": "variable.other.nxs",
+            "settings": {
+                "foreground": "#ffa28b"
+            }
+        },
+        {
+            "scope": "entity.name.function.nxs",
+            "settings": {
+                "foreground": "#58a6ff",
+                "fontStyle": "bold italic"
+            }
+        },
+        {
+            "scope": "storage.type.nxs",
+            "settings": {
+                "foreground": "#00e4f5"
+            }
+        },
+        {
+            "scope": "comment.line.number-sign.nxs",
+            "settings": {
+                "foreground": "#918f8f",
+            }
+        },
+        {
+            "scope": "constant.numeric",
+            "settings": {
+                "foreground": "#ffcc00"
+            }
+        },
+        {
+            "scope": "keyword.operator.nxs",
+            "settings": {
+                "foreground": "#07e0b1",
+                "fontStyle": "bold italic"
+            }
+        },
+        {
+            "scope": "string.quoted.double.nxs",
+            "settings": {
+                "foreground": "#00ff95"
+            }
+        },
+        {
+            "scope": "keyword.control.nxs",
+            "settings": {
+                "foreground": "#ff7b72"
+            }
+        },
+        {
+            "scope": "variable.nxs",
+            "settings": {
+                "foreground": "#c9d1d9"
+            }
+        },
+        {
+            "scope": "support.function.nxs",
+            "settings": {
+                "foreground": "#e2c5ff",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "scope": "variable.parameter.nxs",
+            "settings": {
+                "foreground": "#e2c5ff",
+                "fontStyle": "italic underline"
+            }
+        }
+    ]
+}
