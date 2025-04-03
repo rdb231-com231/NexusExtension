@@ -8,6 +8,7 @@
     "patterns": [
         {"include": "#comments"},
         {"include": "#strings"},
+        {"include": "#stdlibsKeyword"},
         {"include": "#keywords"},
         {"include": "#exceptionKeywords"},
         {"include": "#types"},
@@ -23,9 +24,9 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.nxs",
-                "match": "\\b(def|using|nexus|as|if|else|range|to|change|while|continue|break|return|end|do)\\b"
-            }]
-        },
+                "match": "\\b(def|using|nexus|as|if|else|range|to|change|while|continue|from|import|break|return|end|do)\\b"
+            }
+        ]},
         "exceptionKeywords": {
             "patterns": [{
                 "name": "keyword.control.exception.nxs",
@@ -55,7 +56,7 @@
         "builtins": {
             "patterns": [{
                 "name": "support.function.nxs",
-                "match": "\\b(write|type|isstr|isint|islist|append|replace|extend|input|input_int|writert|get|del|reverse|len|copy|int|str|run|join)\\b"
+                "match": "\\b(write|type|isstr|isint|islist|map|append|replace|extend|input|input_int|writert|get|del|reverse|len|copy|int|str|run|join)\\b"
             }]
         },
         "params": {
@@ -86,13 +87,27 @@
             }
         ]},
         "strings": {
-            "name": "string.quoted.double.nxs",
-            "begin": "\"",
-            "end": "\"",
-            "patterns": [{
-                "name": "constant.character.escape.nxs",
-                "match": "\\\\."
-            }]
+            "patterns": [
+                {
+                    "name": "string.quoted.double.nxs.special",
+                    "match": "\"stdlibs\"",
+                    "captures": {
+                        "0": { "name": "support.function.nxs" }
+                    }
+                },
+                {
+                    "name": "string.quoted.double.nxs",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [{
+                        "name": "constant.character.escape.nxs",
+                        "match": "\\\\."
+                    }]
+                }
+        ]},
+        "stdlibsKeyword": {
+            "name": "support.function.nxs",
+            "match": "\"stdlibs\""
         },
         "operators": {
             "patterns": [{
